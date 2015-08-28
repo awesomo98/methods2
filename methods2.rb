@@ -1,6 +1,13 @@
 module Methods2
 	
-	# TODO - write elevenish?
+	def elevenish?(x)
+		if(x % 11 == 0) || ((x-1) % 11 == 0) || 
+			return true
+		else
+			return false
+		end
+	end
+
 	
 	# TODO - write ice_cream_party?
 	
