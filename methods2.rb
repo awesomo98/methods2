@@ -33,6 +33,13 @@ module Methods2
 
 	# TODO - write rotate_left
 
-	# TODO - write double23?
+	def double23?(a,b)
+		if (a == (0 || 1)) || (a != b)
+			return false
+		end
+		if (((a && b) == 2) || ((a && b) == 3))
+			return true
+		end
+	end
 
 end

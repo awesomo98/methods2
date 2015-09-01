@@ -29,6 +29,20 @@ class Methods2Test < MiniTest::Test
 		assert_equal 2, @m.ice_cream_party(7,21)
 	end
 
+	def test_successful_squirrel_party
+		
+
+	end
+
+	def test_double23
+		assert_equal false, @m.double23?(0,1)
+		assert_equal true, @m.double23?(2,2)
+		assert_equal true, @m.double23?(3,3)
+		assert_equal false, @m.double23?(0,0)
+		assert_equal false, @m.double23?(2,0)
+		assert_equal false, @m.double23?(2,3)
+	end
+
 
 end
 
