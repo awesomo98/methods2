@@ -29,10 +29,36 @@ class Methods2Test < MiniTest::Test
 		assert_equal 2, @m.ice_cream_party(7,21)
 	end
 
-	def test_successful_squirrel_party
-		
-
+	def test_squirrel_party
+		assert_equal true, @m.squirrel_party?(40, true)
+		assert_equal true, @m.squirrel_party?(41, true)
+		assert_equal true, @m.squirrel_party?(59, true)
+		assert_equal true, @m.squirrel_party?(60, true)
+		assert_equal false, @m.squirrel_party?(39, true)
+		assert_equal true, @m.squirrel_party?(61, false)
+		assert_equal false, @m.squirrel_party?(61, true)
 	end
+
+def test_in_order
+		assert_equal true, @m.in_order?(1, 2, 3, false)
+		assert_equal true, @m.in_order?(3, 2, 4, true)
+		assert_equal false, @m.in_order?(3, 2, 4, false)
+		assert_equal false, @m.in_order?(1, 2, 1, false)
+	end
+
+	def test_less_by_ten
+		assert_equal true, @m.less_by_ten?(0, 10, 7)
+		assert_equal false, @m.less_by_ten?(0, 8, 7)
+		assert_equal true, @m.less_by_ten?(0, 18, 8)
+		assert_equal true, @m.less_by_ten?(100, 110, 9)
+	end
+
+	def test_fizz_string
+		assert_equal F, @m.fizz_string(fizz)
+		assert_equal F, @m.fizz_string(fudge)
+		assert_equal B, @m.fizz_string(job)
+		assert_equal str, @m.fizz_string(fib)
+	 end
 
 	def test_double23
 		assert_equal false, @m.double23?(0,1)

@@ -19,15 +19,47 @@ module Methods2
 		end
 	end
 	
-	# TODO - write successful_squirrel_party?
+	def squirrel_party?(nuts, week_day)
+		if (week_day && ((40 <= nuts) && (nuts <= 60)))
+			return true
+		elsif (!week_day && (nuts >= 40))
+			return true
+		else
+			return false
+		end
+	end
 	
 	# TODO - write ticket
 
-	# TODO - write in_order?
+	def in_order?(a, b, c, bOK)
+		if(b > a && c > b)
+			return true
+		elsif(bOK && c > b)
+			return true
+		else 
+			return false
+		end
+	end
 
-	# TODO - write less_by_ten?
+	def less_by_ten?(a, b, c)
+		if((a >= b + 10) || (a <= b-10))
+			return true
+		elsif((b >= c + 10) || (b <= c-10))
+			return true
+		elsif((c >= a + 10) || (c <= a-10))
+			return true	
+		else 
+			return false
+		end
+	end
 	
-	# TODO - write fizz_string
+	def fizz_string(F, B, str)
+		str = str[]
+		if("str".byteslice(0) == "f")
+			return true
+		elsif("str".byteslice(-1) == "b")
+			return true
+		elsif(str[0])
 
 	# TODO - write first_last_six?
 
